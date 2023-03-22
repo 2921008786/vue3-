@@ -1,0 +1,36 @@
+@import"./normalize.css";
+
+:root{
+    --color--text:#333;
+    --color--high--text:#ff6a00;
+    --color--tint:#ffd500;
+    --color--backgroundcolor:#FFFFFF;
+    --font-size:14px;
+    --line-height:1.5;
+}
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    user-select: none;
+    background-color: var(--color--backgroundcolor);
+    color: var(--color--text);
+    width: 100vh;
+}
+
+a{
+    color:var(--color--text);
+    text-decoration: none;
+}
+
+.hide{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
