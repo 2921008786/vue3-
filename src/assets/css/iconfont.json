@@ -1,0 +1,44 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "160002",
+      "name": "home2",
+      "font_class": "home2",
+      "unicode": "f0175",
+      "unicode_decimal": 983413
+    },
+    {
+      "icon_id": "13851431",
+      "name": "shop-cart-2",
+      "font_class": "shop-cart-",
+      "unicode": "e639",
+      "unicode_decimal": 58937
+    },
+    {
+      "icon_id": "15838547",
+      "name": "user",
+      "font_class": "user",
+      "unicode": "e682",
+      "unicode_decimal": 59010
+    },
+    {
+      "icon_id": "34453048",
+      "name": "return",
+      "font_class": "return",
+      "unicode": "e840",
+      "unicode_decimal": 59456
+    },
+    {
+      "icon_id": "34453173",
+      "name": "category",
+      "font_class": "category",
+      "unicode": "e84d",
+      "unicode_decimal": 59469
+    }
+  ]
+}

@@ -1,5 +1,4 @@
 import axios from "axios";
-
 export function request(config){
     const instance= axios.create({
         baseURL:"https://api.shop.eduwork.cn/",
@@ -8,10 +7,8 @@ export function request(config){
     instance.interceptors.request.use(
         config=>{
             //token
-    
             return config
         },err=>{
-            
         }
     )
     
