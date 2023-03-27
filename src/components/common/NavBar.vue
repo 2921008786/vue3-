@@ -1,4 +1,5 @@
 <template>
+  <!-- 导航栏结构 -->
   <div class="nav-bar">
     <div class="nav-bar-item left" @click="$router.go(-1)">
       <i class="iconfont icon-return"></i>
@@ -24,6 +25,7 @@
   text-align: center;
   line-height: 45px;
   color: rgb(85, 84, 84);
+  z-index: 999;
 }
 .nav-bar-item {
   flex: 1;

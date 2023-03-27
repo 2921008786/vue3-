@@ -1,7 +1,6 @@
 <script setup>
 import { RouterView } from "vue-router";
 </script>
-
 <template>
   <routerView />
   <menu class="menu">
@@ -25,7 +24,9 @@ import { RouterView } from "vue-router";
 </template>
 
 <style>
+/* 引入基本样式 */
 @import "./assets/css/base.css";
+/* 引入图标字体 */
 @import "./assets/css/iconfont.css";
 .menu {
   display: flex;

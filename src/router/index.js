@@ -17,7 +17,6 @@ let routes= [
         meta:{
             title:"分类"  
           },
-        //使用import可以路由懒加载，如果不使用，太多组件一起加载会造成白屏
         component: () => import('../views/category/Category.vue') 
     },
     {
@@ -26,7 +25,6 @@ let routes= [
         meta:{
             title:"个人中心"  
           },
-        //使用import可以路由懒加载，如果不使用，太多组件一起加载会造成白屏
         component: () => import('../views/profile/Profile.vue') 
     },
     {
@@ -35,7 +33,6 @@ let routes= [
         meta:{
             title:"购物车"  
           },
-        //使用import可以路由懒加载，如果不使用，太多组件一起加载会造成白屏
         component: () => import('../views/shopcart/Shopcart.vue') 
     },
     {
@@ -44,7 +41,6 @@ let routes= [
         meta:{
             title:"商品详情"  
           },
-        //使用import可以路由懒加载，如果不使用，太多组件一起加载会造成白屏
         component: () => import('../views/detail/Detail.vue') 
     },
     //{
