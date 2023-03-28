@@ -29,7 +29,7 @@ function itemClick(index) {
   line-height: 40px;
   background-color: #f6f6f6;
   position: sticky;
-  top: 45px;
+  top: 44px;
   z-index: 9;
 }
 

@@ -11,7 +11,7 @@ const itemClick = (id) => {
 </script>
 <template>
   <div class="goods-item" @click="itemClick(props.book.id)">
-    <img :src="props.book.cover_url" alt="???" />
+    <img v-lazy="props.book.cover_url" alt="???" />
     <div class="goods-info">
       <p>{{ props.book.title }}</p>
       <p>

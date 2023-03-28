@@ -6,7 +6,7 @@
       :key="item.id"
     >
       <a href="javascript:;" @click="goto(item.id)">
-        <img :src="item.cover_url" alt="推荐商品" />
+        <img v-lazy="item.cover_url" alt="推荐商品" />
         <div>{{ item.title }}</div>
       </a>
     </li>
@@ -17,11 +17,12 @@
   display: flex;
   padding: 15px 0 20px;
   text-align: center;
-  overflow: auto;
+  overflow: hidden;
 }
 .recgoods-item {
   flex: 1;
   font-size: 12px;
+  padding: 0 10px;
 }
 .recgoods-item img {
   width: 80px;
