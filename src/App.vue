@@ -1,5 +1,7 @@
 <script setup>
 import { RouterView } from "vue-router";
+import { useCountStore } from "./store/count";
+const countStore = useCountStore();
 </script>
 <template>
   <routerView />
@@ -17,7 +19,9 @@ import { RouterView } from "vue-router";
       <div>个人中心</div>
     </router-link>
     <router-link to="/shopcart" class="menu-item">
-      <i class="iconfont icon-shop-cart-"></i>
+      <van-badge :content="countStore.shopcount" max="99">
+        <i class="iconfont icon-shop-cart-"></i>
+      </van-badge>
       <div>购物车</div>
     </router-link>
   </menu>

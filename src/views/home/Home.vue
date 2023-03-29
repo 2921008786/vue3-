@@ -63,7 +63,6 @@ onMounted(() => {
   getHomeAllData().then((res) => {
     recommends.value = res.data.goods.data;
     banners.value = res.data.slides;
-    console.log(banners.value);
   });
   getHomeGoods("sales").then((res) => {
     goods.sales.list = res.data.goods.data;
