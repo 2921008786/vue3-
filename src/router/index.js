@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
-
- 
+import pinia from "../store/user";
+import { useUserStore } from "../store/user"; 
+import { showSuccessToast } from "vant";
+const store = useUserStore(pinia)
 let routes= [
     {
         path: '/',
@@ -23,7 +25,9 @@ let routes= [
         path: '/profile',
         name: 'crofile',
         meta:{
-            title:"个人中心"  
+            title:"个人中心"  ,
+            isAuthRequired:true   
+
           },
         component: () => import('../views/profile/Profile.vue') 
     },
@@ -31,7 +35,8 @@ let routes= [
         path: '/shopcart',
         name: 'shopcart',
         meta:{
-            title:"购物车"  
+            title:"购物车",
+            isAuthRequired:true   
           },
         component: () => import('../views/shopcart/Shopcart.vue') 
     },
@@ -43,6 +48,22 @@ let routes= [
           },
         component: () => import('../views/detail/Detail.vue') 
     },
+    {
+      path: '/login',
+      name: 'login',
+      meta:{
+          title:"登录"  
+        },
+      component: () => import('../views/profile/Login.vue') 
+  },
+  {
+    path: '/register',
+    name: 'register',
+    meta:{
+        title:"注册"  
+      },
+    component: () => import('../views/profile/Register.vue') 
+},
     //{
         //配置404页面
         //path: '/:catchAll(.*)',
@@ -56,8 +77,14 @@ const router = createRouter({
     routes
 })
 
-// router.beforeEach(()=>{
-//     //前置路由守卫
-// })
-// 导出
+router.beforeEach((to,from,next)=>{
+    // 前置路由守卫
+    if(to.meta.isAuthRequired && store.isLogin ===false)
+    {
+      showSuccessToast ("请先登录再使用哦~")
+      next("/login")
+    }else{
+      next()
+    }
+})
 export default router 
